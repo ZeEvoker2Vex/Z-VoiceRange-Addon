@@ -1,0 +1,17 @@
+[
+{
+  "modid": "z-voice-range",
+  "name": "Z-VoiceRange Addon",
+  "description": "This mod adds by default 3 speak modes, \"Whisper\", \"Speak\" and \"Shout\" with different voice range.\nHowever, you can change all this via the configuration file or the in-game command. Check the Wiki or use the in-game help to find out more.\nAddon from ModularVoiceChat mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/ZeEvoker2Vex/Z-VoiceRange-Addon",
+  "updateUrl": "",
+  "authorList": ["ZeEvoker2Vex"],
+  "credits": "Developed by ZeEvoker2Vex.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [],
+  "requiredMods": ["modularvc"]
+}
+]

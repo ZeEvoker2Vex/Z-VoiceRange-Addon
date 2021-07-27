@@ -1,0 +1,30 @@
+{
+  "translationConfig": {
+    "translateType": "user",
+    "forcedLang": "en_us"
+  },
+  "defaultSpeakMode": "SPEAK",
+  "speakModes": {
+    "WHISPER": {
+      "distance": 5,
+      "translations": {
+        "fr_fr": "Vous chuchottez",
+        "en_us": "You whisper"
+      }
+    },
+    "SPEAK": {
+      "distance": 15,
+      "translations": {
+        "fr_fr": "Vous parlez",
+        "en_us": "You speak"
+      }
+    },
+    "SHOUT": {
+      "distance": 30,
+      "translations": {
+        "fr_fr": "Vous criez",
+        "en_us": "You shout"
+      }
+    }
+  }
+}

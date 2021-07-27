@@ -1,0 +1,92 @@
+key.categories.z-voice-range=Z-Voice Range Addon
+key.z-voice-range.voicerange=Voice Range
+
+cmd.voicerange.rlconfig.success=The config has been reloaded!
+cmd.voicerange.rlconfig.failed=The config could not be reloaded!
+
+cmd.voicerange.save.success=The values have been saved in the config file!
+cmd.voicerange.save.failed=A problem occurred while saving in the config file!
+
+cmd.voicerange.speakmodes.title=Here is the list of available speak modes:
+cmd.voicerange.speakmodes.mode==> %s: has a range of %s blocks. Translations:
+cmd.voicerange.speakmodes.translation=- %s: %s
+
+cmd.voicerange.help.title=Help on the /%s command:
+cmd.voicerange.help.syntax=- Syntax: /voicerange <rlconfig,save,speakmodes,help,speakmode> [SpeakModeKey] [key:value]
+cmd.voicerange.help.argstitle=- Explanations of the arguments (a SpeakMode can be for instance "Whisper", "Speak", ..):
+cmd.voicerange.help.rlconfig==> rlconfig: allows to reload the data from the config in game.
+cmd.voicerange.help.save==> save: allow to save the game data to the config.
+cmd.voicerange.help.speakmodes==> speakmodes: shows the list of all speak modes.
+cmd.voicerange.help.help==> help [arg]: shows this message. A argument of the command can be specified to know its details (e.g. /voicerange help config).
+cmd.voicerange.help.speakmode==> speakmode <SpeakModeKey> [key:value]: when using this argument, it's mandatory to fill in the SpeakModeKey. "/voicerange help speakmode" to see the details.
+cmd.voicerange.help.config==> config <configKey> [configValue]: allows you to change some configuration parameters that are not linked to a specific SpeakMode. "/voicerange help config" to see the details.
+
+cmd.voicerange.help.speakmode.1=* <SpeakModeKey>: the name of a SpeakMode (in the config file in CAPITAL letters between "quotation marks", surrounding the characteristics of this one, for instance "SPEAK")
+cmd.voicerange.help.speakmode.2=* Without specifying a key:value pair, shows details about this SpeakMode, containing the voice range distance and translations.
+cmd.voicerange.help.speakmode.3=* By specifying the pair, creates/changes/deletes the values stored in the code. So you need to save them in the config to keep them permanently (/voicerange save).
+cmd.voicerange.help.speakmode.4=* [key:value] a pair with a key and its value. The different possibilities are:
+cmd.voicerange.help.speakmode.5=* create:distance = creates a new SpeakMode having as key and distance the SpeakModeKey and distance respectively filled in.
+cmd.voicerange.help.speakmode.6=* delete:confirm = deletes the SpeakMode with the specified SpeakModeKey.
+cmd.voicerange.help.speakmode.7=* edit;distance:X = changes the voice range distance of the indicated SpeakModeKey. X is the distance in blocks.
+cmd.voicerange.help.speakmode.8=* edit;translation.langCode:X = adds a translation (or modifies it if it exists) having as key the langCode (e.g.: "en_us"). The translation follows the ":" and is X, and the SpeakModeKey is always the one given.
+cmd.voicerange.help.speakmode.9=* edit;translation.langCode:delete = deletes the translation with the given langCode as key. Always on the indicated SpeakModeKey.
+cmd.voicerange.help.speakmode.10=* edit;defaultSpeakMode:confirm = changes the defaultSpeakMode by the indicated SpeakModeKey.
+
+cmd.voicerange.help.config.1=* <configKey> is a configuration key and <configValue> the value we want to assign to it. There are 3 configuration keys:
+cmd.voicerange.help.config.2=* Without specifying a configValue, shows the current value of the key.
+cmd.voicerange.help.config.3=* By specifying a value, it modifies the one present in the code. So you need to save them in the config to keep them permanently (/voicerange save).
+cmd.voicerange.help.config.4=* defaultSpeakMode = defaultSpeakMode = shows or edits the current defaultSpeakMode.
+cmd.voicerange.help.config.5=* translateType = shows or edits the translateType, this is the translation method used for SpeakMode. Two choices available: "forced" or "user".
+cmd.voicerange.help.config.6=* "forced" uses the language specified in the value of "forcedLang" and "user" uses the language of the client.
+cmd.voicerange.help.config.7=* forcedLang = shows or edits the language used for SpeakMode translations if the translateType is "forced". It is a langCode like "fr_fr" or "en_us".
+
+cmd.voicerange.help.details.failed=<%s> is not an argument to the /%s command
+cmd.voicerange.help.details.title=Help on the /%s <%s> argument:
+
+cmd.voicerange.speakmode.failed=The SpeakMode "%s" does not exist. Maybe you forgot to reload the config? Otherwise create it with "/voicerange speakmode %s create:distance"
+cmd.voicerange.speakmode.title=Here are the details of the SpeakMode %s:
+cmd.voicerange.speakmode.distance==> Voice range up to %s blocks. Translations:
+cmd.voicerange.speakmode.translation=- %s: %s
+
+cmd.voicerange.config.failed=The argument "%s" is not a configuration key. Type "/voicerange help config" to find out more.
+cmd.voicerange.config.defaultSpeakMode.get=The default SpeakMode (assigned to the connection) is "%s".
+cmd.voicerange.config.translateType.get=The translateType is "%s".
+cmd.voicerange.config.forcedLang.get.langCode=The language used with the translateType "forced" when changing SpeakMode is "%s".
+
+cmd.voicerange.config.defaultSpeakMode.set=The default SpeakMode is now "%s".
+cmd.voicerange.config.translateType.set=The translateType has been set to "%s".
+cmd.voicerange.config.translateType.set.failed=The only two existing translateType are "forced" and "user".
+cmd.voicerange.config.forcedLang.set=The language used with the translateType "forced" is now "%s". Be careful, this langCode may not exist!
+cmd.voicerange.config.forcedLang.langServer=Currently the language used is the last.
+cmd.voicerange.config.forcedLang.langClient=Currently the language used is that of the user.
+
+cmd.voicerange.speakmode.create.alreadyexist=The SpeakMode "%s" already exists, impossible to create!
+cmd.voicerange.speakmode.create.speakModeAvailable=A SpeakMode has just been created, you use it now.
+cmd.voicerange.speakmode.create.success1=The SpeakMode "%s" has just been created! It is only saved in the code, to save it permanently in config, type "/voicerange save".
+cmd.voicerange.speakmode.create.success2=Tip: this new SpeakMode is saved at a random position, adjust it by changing its location in the config file and then with a reload (/voicerange rlconfig).
+
+cmd.voicerange.speakmode.delete.noneSpeakModePlayers=The last SpeakMode has been removed. From now on the distance used will be the default distance in the ModularVoiceChat config!
+cmd.voicerange.speakmode.delete.noneSpeakModeSender=You have just deleted the last SpeakMode.
+cmd.voicerange.speakmode.delete.defaultSpeakMode=You have just deleted the defaultSpeakMode. So it has just been changed by the first SpeakMode being "%s".
+cmd.voicerange.speakmode.delete.playerMoveSpeakMode=The SpeakMode you are using has been removed, you are now using the first one available.
+cmd.voicerange.speakmode.delete.success1=You have just removed the SpeakMode "%s", but this is not permanent and only in the code until someone saves in the config with "/voicerange save".
+cmd.voicerange.speakmode.delete.failed=If you want to delete the SpeakMode "%s", you must write "confirm" after the ":" i.e. "/voicerange speakmode %s delete:confirm".
+
+cmd.voicerange.speakmode.edit.distance.success=The voice range of SpeakMode "%s" is now %s blocks.
+
+cmd.voicerange.speakmode.edit.translation.remove=The translation for the language "%s" of SpeakMode "%s" has been removed.
+cmd.voicerange.speakmode.edit.translation.edit=The translation for the language "%s" of SpeakMode "%s" has been changed.
+cmd.voicerange.speakmode.edit.translation.add=The translation for the language "%s" of SpeakMode "%s" has been added.
+
+cmd.voicerange.speakmode.edit.defaultSpeakMode.failed=If you want to change the defaultSpeakMode, you have to write "confirm" after the ":" i.e. "/voicerange speakmode %s edit;defaultSpeakMode:confirm".
+
+cmd.voicerange.speakmode.keyNoExist=The key "%s" is not a valid key for the command "/voicerange speakmode %s <key:value>".
+cmd.voicerange.speakmode.pairNotFound=Unable to find the <key:value> pair. Be sure to use the "/voicerange help speakmode" command.
+
+cmd.voicerange.distance.NaN=The distance is not a number!
+cmd.voicerange.distance.range=The distance must be between 0 and 10000 inclusive!
+
+voicerange.translateType.infos=The "forced" translateType will use the "forcedLang" language, while the "user" translateType will use the client language.
+
+voicerange.nospeakmode.connect=Unable to assign you a SpeakMode, none was found! (please contact the administrators)
+voicerange.nospeakmode.change=Unable to change SpeakMode, none found! (please contact the administrators)
