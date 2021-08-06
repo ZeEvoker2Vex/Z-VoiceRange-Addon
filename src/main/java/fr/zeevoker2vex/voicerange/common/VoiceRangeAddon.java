@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.event.FMLServerStoppingEvent;
+import net.minecraftforge.fml.relauncher.Side;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = VoiceRangeAddon.MOD_ID, name = VoiceRangeAddon.NAME, version = VoiceRangeAddon.VERSION)
@@ -17,7 +18,7 @@ public class VoiceRangeAddon {
 
     public static final String MOD_ID = "z-voice-range";
     public static final String NAME = "Z-VoiceRange";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.0.1";
 
     public static final String CONFIG_FOLDER = "Z-MVC-Addons";
 
@@ -47,7 +48,7 @@ public class VoiceRangeAddon {
 
     @EventHandler
     public void onServerStopping(FMLServerStoppingEvent event){
-        ServerProxy.getConfig().saveToConfig();
+        if(event.getSide().equals(Side.SERVER)) ServerProxy.getConfig().saveToConfig();
     }
 
     public static Logger getLogger() {
