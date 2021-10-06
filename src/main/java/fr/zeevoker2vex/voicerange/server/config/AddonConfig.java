@@ -85,7 +85,7 @@ public class AddonConfig {
             speakModes.put(shoutMode.getKey(), shoutMode);
 
             saveToConfig();
-            LogUtils.successLog("The default config file has been created with default values !");
+            LogUtils.successLog("The default config file has been created with default values!");
         } catch (IOException e) {
             LogUtils.errorLog("An error occurred on trying to create config file.");
             e.printStackTrace();
@@ -133,7 +133,7 @@ public class AddonConfig {
             SpeakMode speakMode = new SpeakMode(KEY, distance, translations);
             speakModes.put(KEY, speakMode);
         }
-        LogUtils.successLog("The config file has been successfully read !");
+        LogUtils.successLog("The config file has been successfully read!");
         return true;
     }
 
@@ -171,11 +171,11 @@ public class AddonConfig {
         try {
             FileUtils.writeStringToFile(getConfigFile(), GSON.toJson(configJson), Charset.defaultCharset(), false);
         } catch (IOException e) {
-            LogUtils.errorLog("An error occurred on saving config in file !");
+            LogUtils.errorLog("An error occurred on saving config in file!");
             e.printStackTrace();
             return false;
         }
-        LogUtils.successLog("Values has been saved in config file !");
+        LogUtils.successLog("Values has been saved in config file!");
         return true;
     }
 

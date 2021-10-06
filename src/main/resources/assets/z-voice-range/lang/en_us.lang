@@ -13,13 +13,13 @@ cmd.voicerange.speakmodes.translation=- %s: %s
 
 cmd.voicerange.help.title=Help on the /%s command:
 cmd.voicerange.help.syntax=- Syntax: /voicerange <rlconfig,save,speakmodes,help,speakmode> [SpeakModeKey] [key:value]
-cmd.voicerange.help.argstitle=- Explanations of the arguments (a SpeakMode can be for instance "Whisper", "Speak", ..):
+cmd.voicerange.help.argstitle=- Explanations of the arguments (a SpeakMode can be for instance "Whisper", "Speak", ..) :
 cmd.voicerange.help.rlconfig==> rlconfig: allows to reload the data from the config in game.
 cmd.voicerange.help.save==> save: allow to save the game data to the config.
 cmd.voicerange.help.speakmodes==> speakmodes: shows the list of all speak modes.
-cmd.voicerange.help.help==> help [arg]: shows this message. A argument of the command can be specified to know its details (e.g. /voicerange help config).
-cmd.voicerange.help.speakmode==> speakmode <SpeakModeKey> [key:value]: when using this argument, it's mandatory to fill in the SpeakModeKey. "/voicerange help speakmode" to see the details.
-cmd.voicerange.help.config==> config <configKey> [configValue]: allows you to change some configuration parameters that are not linked to a specific SpeakMode. "/voicerange help config" to see the details.
+cmd.voicerange.help.help==> help [arg] : shows this message. A argument of the command can be specified to know its details (e.g. /voicerange help config).
+cmd.voicerange.help.speakmode==> speakmode <SpeakModeKey> [key:value] : when using this argument, it's mandatory to fill in the SpeakModeKey. "/voicerange help speakmode" to see the details.
+cmd.voicerange.help.config==> config <configKey> [configValue] : allows you to change some configuration parameters that are not linked to a specific SpeakMode. "/voicerange help config" to see the details.
 
 cmd.voicerange.help.speakmode.1=* <SpeakModeKey>: the name of a SpeakMode (in the config file in CAPITAL letters between "quotation marks", surrounding the characteristics of this one, for instance "SPEAK")
 cmd.voicerange.help.speakmode.2=* Without specifying a key:value pair, shows details about this SpeakMode, containing the voice range distance and translations.
